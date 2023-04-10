@@ -36,11 +36,24 @@ const rocketsSlice = createSlice({
         rockets: updatedRockets,
       };
     },
+    cancelRocket: (state, action) => {
+      const id = action.payload;
+      const updatedRockets = state.rockets.map((rocket) => {
+        if (rocket.id !== id) {
+          return rocket;
+        }
+        return { ...rocket, reserved: false };
+      });
+      return {
+        ...state,
+        rockets: updatedRockets,
+      };
+    },
   },
 });
 
 export const {
-  setRockets, setLoading, setError, reserveRocket,
+  setRockets, setLoading, setError, reserveRocket, cancelRocket,
 } = rocketsSlice.actions;
 
 export const fetchRocket = () => async (dispatch) => {

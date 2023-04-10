@@ -1,8 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Rocketdetails.css';
+import { useDispatch } from 'react-redux';
+import { cancelRocket, reserveRocket } from '../../redux/rockets/rocketsSlice';
 
 export default function Rocketdetails(props) {
+  const dispatch = useDispatch();
   const { rocket } = props;
   const {
     id, rocketName, description, flickrImages, reserved,
@@ -22,16 +25,18 @@ export default function Rocketdetails(props) {
           {description}
         </p>
         {reserved ? (
-          <button
+          <buttons
             type="button"
             className="cancel"
+            onClick={() => dispatch(cancelRocket(id))}
           >
             Cancel Reservation
-          </button>
+          </buttons>
         ) : (
           <button
             type="button"
             className="rocket-button"
+            onClick={() => dispatch(reserveRocket(id))}
           >
             Reserve Rocket
           </button>
