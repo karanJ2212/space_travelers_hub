@@ -51,9 +51,10 @@ export const fetchRocket = () => async (dispatch) => {
     response.data.forEach((data) => {
       const rocketdata = {
         id: data.id,
-        rocket_name: data.name,
+        rocketName: data.name,
         description: data.description,
-        flickr_images: data.flickr_images,
+        flickrImages: data.flickr_images,
+        reserved: false,
 
       };
       dataRocket.push(rocketdata);

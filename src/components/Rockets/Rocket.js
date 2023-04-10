@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchRocket } from '../../redux/rockets/rocketsSlice';
+import Rocketdetails from '../Rocketdetails/Rocketdetails';
 
 export default function Rocket() {
   const rocketData = useSelector((state) => state.rockets.rockets);
@@ -18,14 +19,12 @@ export default function Rocket() {
   }
 
   return (
-    <section className="rocketContainer">
-      {rocketData.map((rocket) => (
-        <div key={rocket.id}>
-          <h2>{rocket.name}</h2>
-          <img src={rocket.flickr_images[0]} alt={rocket.name} />
-        </div>
-      ))}
-    </section>
-
+    <div className="data-container">
+      <ul className="map">
+        {rocketData.map((rocket) => (
+          <Rocketdetails key={rocket.id} rocket={rocket} />
+        ))}
+      </ul>
+    </div>
   );
 }
