@@ -1,0 +1,71 @@
+.list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.heading-rockets {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rocket-images {
+  width: 250px;
+}
+
+.rocket-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.paragraph {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #121212;
+}
+
+.reserved {
+  background-color: rgb(108, 108, 230);
+  height: 2rem;
+  width: 5rem;
+  border: none;
+  border-radius: 3px 3px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+}
+
+.rocket-button {
+  height: 2.3rem;
+  width: 8rem;
+  background-color: rgb(108, 108, 230);
+  border-radius: 3px 3px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cancel {
+  height: 2.3rem;
+  width: 8rem;
+  background-color: rgb(5, 5, 37);
+  border-radius: 3px 3px;
+  color: rgb(252, 252, 252);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
