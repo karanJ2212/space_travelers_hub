@@ -10,6 +10,7 @@ export const getMissions = createAsyncThunk(
         mission_id: mission.mission_id,
         mission_name: mission.mission_name,
         mission_description: mission.description,
+        missionMember: false,
       }));
       return data;
     } catch (error) {
@@ -17,6 +18,14 @@ export const getMissions = createAsyncThunk(
     }
   },
 );
+
+const handleMemberships = (state, missionId, missionMember = false) => {
+  const missions = state.map((m) => {
+    if (m.mission_id === missionId) return { ...m, missionMember };
+    return m;
+  });
+  return missions;
+};
 
 const missionSlice = createSlice({
   name: 'missions',
@@ -30,6 +39,14 @@ const missionSlice = createSlice({
       ...state,
       missions: action.payload,
       isLoading: false,
+    }),
+    leaveMission: (state, action) => ({
+      ...state,
+      missions: handleMemberships(state.missions, action.payload),
+    }),
+    joinMission: (state, action) => ({
+      ...state,
+      missions: handleMemberships(state.missions, action.payload, true),
     }),
     setError: (state, action) => ({
       ...state,
@@ -55,6 +72,6 @@ const missionSlice = createSlice({
   },
 });
 
-export const { setMissions } = missionSlice.actions;
+export const { setMissions, leaveMission, joinMission } = missionSlice.actions;
 
 export default missionSlice.reducer;

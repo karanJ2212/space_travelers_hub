@@ -1,13 +1,21 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMissions } from '../../redux/missions/missionslice';
+import MissionStatus from '../MissionStatus';
+import MissionJoinButton from '../MissionJoinButton';
 
 export default function Missions() {
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(getMissions());
   }, [dispatch]);
-  const missions = useSelector((store) => store.missions.missions || []);
+  const { missions, isLoading } = useSelector((store) => store.missions);
+
+  if (isLoading || !missions.length) {
+    return <div className="loading">Loading...</div>;
+  }
+
   return (
     <div>
       <table>
@@ -20,12 +28,19 @@ export default function Missions() {
           </tr>
         </thead>
         <tbody>
-          {missions.map((mission) => (
+          {(missions || []).map((mission) => (
             <tr key={mission.mission_id}>
               <td>{mission.mission_name}</td>
               <td>{mission.mission_description}</td>
-              <td />
-              <td />
+              <td>
+                <MissionStatus member={mission.missionMember} />
+              </td>
+              <td>
+                <MissionJoinButton
+                  status={mission.missionMember}
+                  missionId={mission.mission_id}
+                />
+              </td>
             </tr>
           ))}
         </tbody>
