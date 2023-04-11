@@ -1,7 +1,7 @@
-import renderer from "react-test-renderer";
-import { Provider } from "react-redux";
-import store from "../redux/store";
-import Rocket from "../components/Rockets/Rocket";
+import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
+import Rocket from '../components/Rockets/Rocket';
 
 const RocketProvider = () => (
   <Provider store={store}>
@@ -9,8 +9,8 @@ const RocketProvider = () => (
   </Provider>
 );
 
-describe("Rockets component testing", () => {
-  it("checks for accurate rendering of all rockets", () => {
+describe('Rockets component testing', () => {
+  it('checks for accurate rendering of all rockets', () => {
     const allRockets = renderer.create(<RocketProvider />).toJSON();
     expect(allRockets).toMatchSnapshot();
   });

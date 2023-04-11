@@ -1,15 +1,15 @@
-import React from "react";
-import renderer from "react-test-renderer";
-import { Provider } from "react-redux";
-import MyProfile from "../components/MyProfile/MyProfile";
-import store from "../redux/store";
+import React from 'react';
+import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import MyProfile from '../components/MyProfile/MyProfile';
+import store from '../redux/store';
 
-it("matches snapshot", () => {
+it('matches snapshot', () => {
   const tree = renderer
     .create(
       <Provider store={store}>
         <MyProfile />
-      </Provider>
+      </Provider>,
     )
     .toJSON();
   expect(tree).toMatchSnapshot();

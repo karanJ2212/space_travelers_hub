@@ -1,18 +1,18 @@
-import React from "react";
-import { MemoryRouter } from "react-router-dom";
-import { render, cleanup } from "@testing-library/react";
-import Navbar from "../components/Navbar/Navbar";
-import "@testing-library/jest-dom";
+import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
+import { render, cleanup } from '@testing-library/react';
+import Navbar from '../components/Navbar/Navbar';
+import '@testing-library/jest-dom';
 
 afterEach(() => {
   cleanup();
 });
-describe("Render All Components", () => {
-  test("render navbar", () => {
+describe('Render All Components', () => {
+  test('render navbar', () => {
     const { container } = render(
       <MemoryRouter>
         <Navbar />
-      </MemoryRouter>
+      </MemoryRouter>,
     );
     expect(container.firstChild).toMatchInlineSnapshot(`
 <nav

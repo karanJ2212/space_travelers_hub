@@ -1,8 +1,8 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { API } from "../../constants";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { API } from '../../constants';
 
 export const getMissions = createAsyncThunk(
-  "spacehub/getMissions",
+  'spacehub/getMissions',
   async (_, thunkAPI) => {
     try {
       const response = await fetch(`${API}/missions`);
@@ -15,9 +15,9 @@ export const getMissions = createAsyncThunk(
       }));
       return data;
     } catch (error) {
-      return thunkAPI.rejectWithValue("Something went wrong");
+      return thunkAPI.rejectWithValue('Something went wrong');
     }
-  }
+  },
 );
 
 const handleMemberships = (state, missionId, reserved = false) => {
@@ -29,7 +29,7 @@ const handleMemberships = (state, missionId, reserved = false) => {
 };
 
 const missionSlice = createSlice({
-  name: "missions",
+  name: 'missions',
   initialState: {
     missions: [],
     isLoading: false,

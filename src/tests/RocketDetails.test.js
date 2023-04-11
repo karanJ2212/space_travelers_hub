@@ -1,10 +1,10 @@
-import renderer from "react-test-renderer";
-import { Provider } from "react-redux";
-import store from "../redux/store";
-import Rocketdetails from "../components/Rocketdetails/Rocketdetails";
+import renderer from 'react-test-renderer';
+import { Provider } from 'react-redux';
+import store from '../redux/store';
+import Rocketdetails from '../components/Rocketdetails/Rocketdetails';
 
-describe("Rockets component testing", () => {
-  it("checks for accurate rendering of all rockets", () => {
+describe('Rockets component testing', () => {
+  it('checks for accurate rendering of all rockets', () => {
     const rocketObject = [
       {
         height: { meters: 22.25, feet: 73 },
@@ -25,7 +25,7 @@ describe("Rockets component testing", () => {
               height: { meters: 3.5, feet: 11.5 },
               diameter: { meters: 1.5, feet: 4.9 },
             },
-            option_1: "composite fairing",
+            option_1: 'composite fairing',
           },
           reusable: false,
           engines: 1,
@@ -37,44 +37,47 @@ describe("Rockets component testing", () => {
           thrust_sea_level: { kN: 420, lbf: 94000 },
           thrust_vacuum: { kN: 480, lbf: 110000 },
           number: 1,
-          type: "merlin",
-          version: "1C",
-          layout: "single",
+          type: 'merlin',
+          version: '1C',
+          layout: 'single',
           engine_loss_max: 0,
-          propellant_1: "liquid oxygen",
-          propellant_2: "RP-1 kerosene",
+          propellant_1: 'liquid oxygen',
+          propellant_2: 'RP-1 kerosene',
           thrust_to_weight: 96,
         },
         landing_legs: { number: 0, material: null },
         payload_weights: [
-          { id: "leo", name: "Low Earth Orbit", kg: 450, lb: 992 },
+          {
+            id: 'leo', name: 'Low Earth Orbit', kg: 450, lb: 992,
+          },
         ],
         flickrImages: [
-          "https://imgur.com/DaCfMsj.jpg",
-          "https://imgur.com/azYafd8.jpg",
+          'https://imgur.com/DaCfMsj.jpg',
+          'https://imgur.com/azYafd8.jpg',
         ],
-        rocketName: "Falcon 1",
-        type: "rocket",
+        rocketName: 'Falcon 1',
+        type: 'rocket',
         active: false,
         reserved: false,
         stages: 2,
         boosters: 0,
         cost_per_launch: 6700000,
         success_rate_pct: 40,
-        first_flight: "2006-03-24",
-        country: "Republic of the Marshall Islands",
-        company: "SpaceX",
-        wikipedia: "https://en.wikipedia.org/wiki/Falcon_1",
+        first_flight: '2006-03-24',
+        country: 'Republic of the Marshall Islands',
+        company: 'SpaceX',
+        wikipedia: 'https://en.wikipedia.org/wiki/Falcon_1',
         description:
-          "The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.",
-        id: "5e9d0d95eda69955f709d1eb",
+          'The Falcon 1 was an expendable launch system privately developed and manufactured by SpaceX during 2006-2009. On 28 September 2008, Falcon 1 became the first privately-developed liquid-fuel launch vehicle to go into orbit around the Earth.',
+        id: '5e9d0d95eda69955f709d1eb',
       },
     ];
     const allRockets = renderer
       .create(
         <Provider store={store}>
-          <Rocketdetails rocket={rocketObject[0]} />)
-        </Provider>
+          <Rocketdetails rocket={rocketObject[0]} />
+          )
+        </Provider>,
       )
       .toJSON();
     expect(allRockets).toMatchSnapshot();
