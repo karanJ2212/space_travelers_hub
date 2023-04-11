@@ -47,7 +47,7 @@ export default function Rocketdetails(props) {
 
 Rocketdetails.propTypes = {
   rocket: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     rocketName: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     flickrImages: PropTypes.arrayOf(PropTypes.string).isRequired,

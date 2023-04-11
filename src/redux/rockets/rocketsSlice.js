@@ -68,7 +68,6 @@ export const fetchRocket = () => async (dispatch) => {
         description: data.description,
         flickrImages: data.flickr_images,
         reserved: false,
-
       };
       dataRocket.push(rocketdata);
     });
