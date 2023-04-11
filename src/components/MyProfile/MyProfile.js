@@ -4,6 +4,7 @@ import './MyProfile.css';
 
 export default function MyProfile() {
   const rockets = useSelector((state) => state.rockets.rockets);
+  const missions = useSelector((state) => state.missions.missions);
   return (
     <div className="profile-section">
       <table className="table">
@@ -15,7 +16,16 @@ export default function MyProfile() {
             </th>
           </tr>
         </thead>
-        <tbody>mission names</tbody>
+        <tbody>
+          {' '}
+          {missions
+            .filter((missions) => missions.missionMember)
+            .map((missions) => (
+              <tr key={missions.mission_id} className="border">
+                <p className="profile-mission">{missions.mission_name}</p>
+              </tr>
+            ))}
+        </tbody>
       </table>
       <table className="table-rocket">
         <thead>
