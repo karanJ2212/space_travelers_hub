@@ -17,7 +17,6 @@ export default function MyProfile() {
           </tr>
         </thead>
         <tbody>
-          {' '}
           {missions
             .filter((missions) => missions.reserved)
             .map((missions) => (

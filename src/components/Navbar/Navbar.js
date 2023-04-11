@@ -13,19 +13,19 @@ function Navbar() {
         </Link>
         <ul className="header-cate">
           <li className="list">
-            <NavLink to="/" exact activeClassName="active">
+            <NavLink to="/" className="nav-links">
               Rockets
             </NavLink>
           </li>
           <span className="line">|</span>
           <li className="mission">
-            <NavLink to="/missions" exact activeClassName="active">
+            <NavLink to="/missions" className="nav-links">
               Mission
             </NavLink>
           </li>
           <span className="line">|</span>
           <li className="profile">
-            <NavLink to="/profile" exact activeClassName="active">
+            <NavLink to="/profile" className="nav-links">
               My profile
             </NavLink>
           </li>
