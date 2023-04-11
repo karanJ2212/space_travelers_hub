@@ -19,7 +19,7 @@ export default function MyProfile() {
         <tbody>
           {' '}
           {missions
-            .filter((missions) => missions.missionMember)
+            .filter((missions) => missions.reserved)
             .map((missions) => (
               <tr key={missions.mission_id} className="border">
                 <p className="profile-mission">{missions.mission_name}</p>

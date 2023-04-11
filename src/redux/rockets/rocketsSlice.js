@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+// import axios from 'axios';
 
 const rocketsSlice = createSlice({
   name: 'rockets',
@@ -59,7 +59,7 @@ export const {
 export const fetchRocket = () => async (dispatch) => {
   try {
     dispatch(setLoading(true));
-    const response = await axios.get('https://api.spacexdata.com/v4/rockets');
+    const response = await fetch('https://api.spacexdata.com/v4/rockets');
     const dataRocket = [];
     response.data.forEach((data) => {
       const rocketdata = {

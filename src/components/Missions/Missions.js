@@ -33,11 +33,11 @@ export default function Missions() {
               <td>{mission.mission_name}</td>
               <td>{mission.mission_description}</td>
               <td>
-                <MissionStatus member={mission.missionMember} />
+                <MissionStatus member={mission.reserved} />
               </td>
               <td>
                 <MissionJoinButton
-                  status={mission.missionMember}
+                  status={mission.reserved}
                   missionId={mission.mission_id}
                 />
               </td>

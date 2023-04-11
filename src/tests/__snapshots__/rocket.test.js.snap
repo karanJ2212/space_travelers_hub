@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rockets component testing checks for accurate rendering of all rockets 1`] = `
+<div
+  className="data-container"
+>
+  <ul
+    className="map"
+  />
+</div>
+`;
