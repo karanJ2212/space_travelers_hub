@@ -3,25 +3,81 @@ body {
   font-family:
     -apple-system,
     BlinkMacSystemFont,
-    'Segoe UI',
-    'Roboto',
-    'Oxygen',
-    'Ubuntu',
-    'Cantarell',
-    'Fira Sans',
-    'Droid Sans',
-    'Helvetica Neue',
+    "Segoe UI",
+    "Roboto",
+    "Oxygen",
+    "Ubuntu",
+    "Cantarell",
+    "Fira Sans",
+    "Droid Sans",
+    "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+table {
+  margin: 20px 40px;
+  border-collapse: collapse;
+  border: 1px solid #ccc;
+}
+
+table th,
+table tbody tr {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+table tbody tr td {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+table tbody tr td span {
+  color: #fff;
+  padding: 2px 6px;
+  border-radius: 6px;
+  white-space: nowrap;
+  background-color: gray;
+}
+
+table tbody tr td button {
+  margin: 0 8px;
+  color: #121212;
+  cursor: pointer;
+  padding: 6px 12px;
+  border-radius: 2px;
+  white-space: nowrap;
+  border: 1px solid gray;
+  background-color: #fefefe;
+}
+
+table tbody tr td button.leave {
+  color: red;
+  border: 1px solid red;
+  background-color: transparent;
+}
+
+table tbody tr td span.active {
+  background-color: #087b8f;
+}
+
+table tbody tr td span.leave {
+  color: red;
+  background-color: transparent;
+  border: 1px solid red;
+}
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
 }
