@@ -12,7 +12,7 @@ h3 {
 
 .rocket-line {
   height: 2px;
-  width: 10rem;
+  width: fit-content;
   background-color: black;
   margin-top: 3px;
 }
@@ -20,4 +20,30 @@ h3 {
 .tableSection {
   margin-top: 3rem;
   padding-top: 2rem;
+}
+
+.table-rocket {
+  border: 2px solid black;
+  border-collapse: collapse;
+  width: fit-content;
+}
+
+.table-rocket th,
+.table-rocket td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+/* .rocket-line {
+  border-top: 2px solid black;
+  margin-top: 8px;
+} */
+
+.border-rocket {
+  border: 1px solid black;
+}
+
+.rocket-paragraph {
+  margin: 10px;
 }

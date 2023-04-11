@@ -1,10 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import './MyProfile.css';
-// import { reserveRocket } from '../../redux/rockets/rocketsSlice';
+
 export default function MyProfile() {
   const rockets = useSelector((state) => state.rockets.rockets);
-  // const missions = useSelector((state) => state.missions.missions);
   return (
     <div className="profile-section">
       <table className="table">
@@ -16,15 +15,7 @@ export default function MyProfile() {
             </th>
           </tr>
         </thead>
-        <tbody>
-          {/* {missions
-            .filter((missions) => missions.missionMember)
-            .map((missions) => (
-              <tr key={missions.mission_id} className="border">
-                <p className="profile-mission">{missions.mission_name}</p>
-              </tr>
-            ))} */}
-        </tbody>
+        <tbody>mission names</tbody>
       </table>
       <table className="table-rocket">
         <thead>
