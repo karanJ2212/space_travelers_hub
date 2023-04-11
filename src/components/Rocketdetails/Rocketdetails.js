@@ -10,7 +10,6 @@ export default function Rocketdetails(props) {
   const {
     id, rocketName, description, flickrImages, reserved,
   } = rocket;
-  console.log(id);
   return (
     <li className="list-container">
       <img className="rocket-images" src={flickrImages[0]} alt="rockets" />
@@ -48,7 +47,7 @@ export default function Rocketdetails(props) {
 
 Rocketdetails.propTypes = {
   rocket: PropTypes.shape({
-    id: PropTypes.number.isRequired,
+    id: PropTypes.string.isRequired,
     rocketName: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     flickrImages: PropTypes.arrayOf(PropTypes.string).isRequired,
