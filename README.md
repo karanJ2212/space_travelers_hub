@@ -178,7 +178,7 @@ If you like this project please give star...
 I would like to thank Microverse Team
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-## 📝 License <a name="license"></a>
+
 
 ## 📝 License <a name="license"></a>
 
