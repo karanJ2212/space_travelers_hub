@@ -134,10 +134,15 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Karan Jain**
+
+- GitHub: [Karan Jian](https://github.com/karanJ2212)
+- Linkedin: [Karan Jian](https://www.linkedin.com/in/karanjain2212/)
+
+👤 **William**
 
 - GitHub: [William](https://github.com/verocnica365)
-- GitHub: [Karan Jian](https://github.com/karanJ2212)
+ Linkedin: [William](https://www.linkedin.com/in/verocnica365/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -157,9 +162,23 @@ Feel free to check the [issues page](https://github.com/veronica365/space_travel
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project...
+
+
+
+
+If you like this project please give star...
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+
+
+I would like to thank Microverse Team
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 📝 License <a name="license"></a>
 
 ## 📝 License <a name="license"></a>
 
