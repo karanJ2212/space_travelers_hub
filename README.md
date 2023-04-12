@@ -158,7 +158,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/veronica365/space_travelers_hub/issues).
+Feel free to check the [issues page](https://github.com/karanJ2212/space_travelers_hub/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
