@@ -7,12 +7,14 @@ const rocketsSlice = createSlice({
     rockets: [],
     isLoading: false,
     error: null,
+    fetched: false,
   },
   reducers: {
     setRockets: (state, action) => ({
       ...state,
       rockets: action.payload,
       isLoading: false,
+      fetched: true,
     }),
     setLoading: (state, action) => ({
       ...state,
@@ -61,7 +63,8 @@ export const fetchRocket = () => async (dispatch) => {
     dispatch(setLoading(true));
     const response = await fetch('https://api.spacexdata.com/v4/rockets');
     const dataRocket = [];
-    response.data.forEach((data) => {
+    const data = await response.json();
+    data.forEach((data) => {
       const rocketdata = {
         id: data.id,
         rocketName: data.name,

@@ -5,14 +5,16 @@ import Rocketdetails from '../Rocketdetails/Rocketdetails';
 
 export default function Rocket() {
   const rocketData = useSelector((state) => state.rockets.rockets);
-
+  const fetched = useSelector((state) => state.rockets.fetched);
   const isLoading = useSelector((state) => state.rockets.isLoading);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchRocket());
-  }, [dispatch]);
+    if (!fetched) {
+      dispatch(fetchRocket());
+    }
+  }, [dispatch, fetched]);
 
   if (isLoading) {
     return <p>Loading...</p>;
