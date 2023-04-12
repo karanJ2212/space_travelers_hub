@@ -18,7 +18,7 @@ export default function Missions() {
 
   return (
     <div>
-      <table>
+      <table className="missions">
         <thead>
           <tr>
             <th>Mission</th>

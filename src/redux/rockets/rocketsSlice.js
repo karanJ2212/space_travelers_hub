@@ -61,7 +61,8 @@ export const fetchRocket = () => async (dispatch) => {
     dispatch(setLoading(true));
     const response = await fetch('https://api.spacexdata.com/v4/rockets');
     const dataRocket = [];
-    response.data.forEach((data) => {
+    const data = await response.json();
+    data.forEach((data) => {
       const rocketdata = {
         id: data.id,
         rocketName: data.name,

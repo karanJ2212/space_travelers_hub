@@ -16,29 +16,29 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-table {
+.missions {
   margin: 20px 40px;
   border-collapse: collapse;
   border: 1px solid #ccc;
 }
 
-table th,
-table tbody tr {
+.missions th,
+.missions tbody tr {
   border: 1px solid #ccc;
   padding: 10px;
   background-color: #fff;
 }
 
-table tbody tr:nth-child(odd) {
+.missions tbody tr:nth-child(odd) {
   background-color: #e6e6e6;
 }
 
-table tbody tr td {
+.missions tbody tr td {
   border: 1px solid #ccc;
   padding: 10px;
 }
 
-table tbody tr td span {
+.missions tbody tr td span {
   color: #fff;
   padding: 2px 6px;
   border-radius: 6px;
@@ -46,7 +46,7 @@ table tbody tr td span {
   background-color: gray;
 }
 
-table tbody tr td button {
+.missions tbody tr td button {
   margin: 0 8px;
   color: #121212;
   cursor: pointer;
@@ -57,17 +57,17 @@ table tbody tr td button {
   background-color: #fefefe;
 }
 
-table tbody tr td button.leave {
+.missions tbody tr td button.leave {
   color: red;
   border: 1px solid red;
   background-color: transparent;
 }
 
-table tbody tr td span.active {
+.missions tbody tr td span.active {
   background-color: #087b8f;
 }
 
-table tbody tr td span.leave {
+.missions tbody tr td span.leave {
   color: red;
   background-color: transparent;
   border: 1px solid red;
