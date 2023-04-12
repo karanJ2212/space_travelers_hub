@@ -4,41 +4,33 @@ exports[`matches snapshot 1`] = `
 <div
   className="profile-section"
 >
-  <table
-    className="table"
+  <div
+    className="mprdiv"
   >
-    <thead>
-      <tr>
-        <th>
-          <h3>
-            My Missions
-          </h3>
-          <hr
-            className="rocket-line"
-          />
-        </th>
-      </tr>
-    </thead>
-    <tbody>
-       
-    </tbody>
-  </table>
-  <table
-    className="table-rocket"
+    <h2
+      className="my-profile-h2"
+    >
+      My missions
+    </h2>
+    <table
+      className="table"
+    >
+      <tbody />
+    </table>
+  </div>
+  <div
+    className="mprdiv"
   >
-    <thead>
-      <tr>
-        <th>
-          <h3>
-            My Rockets
-          </h3>
-          <hr
-            className="rocket-line"
-          />
-        </th>
-      </tr>
-    </thead>
-    <tbody />
-  </table>
+    <h2
+      className="my-profile-h2"
+    >
+      My rockets
+    </h2>
+    <table
+      className="table"
+    >
+      <tbody />
+    </table>
+  </div>
 </div>
 `;

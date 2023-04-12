@@ -40,9 +40,8 @@ describe('Render All Components', () => {
       class="list"
     >
       <a
-        activeclassname="active"
         aria-current="page"
-        class="active"
+        class="nav-links active"
         href="/"
       >
         Rockets
@@ -57,8 +56,7 @@ describe('Render All Components', () => {
       class="mission"
     >
       <a
-        activeclassname="active"
-        class=""
+        class="nav-links"
         href="/missions"
       >
         Mission
@@ -73,8 +71,7 @@ describe('Render All Components', () => {
       class="profile"
     >
       <a
-        activeclassname="active"
-        class=""
+        class="nav-links"
         href="/profile"
       >
         My profile
