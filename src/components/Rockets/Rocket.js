@@ -17,7 +17,7 @@ export default function Rocket() {
   }, [dispatch, fetched]);
 
   if (isLoading) {
-    return <p>Loading...</p>;
+    return <div className="loading">Loading...</div>;
   }
 
   return (
