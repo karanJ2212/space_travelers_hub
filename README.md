@@ -1,4 +1,5 @@
 <div align="center">
+   <img src="./src/images/logo.png" alt="logo" width="auto"  height="auto" />
   <h3><b>Space Traveler's Hub</b></h3>
 </div>
 
