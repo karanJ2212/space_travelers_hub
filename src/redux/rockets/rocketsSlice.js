@@ -7,12 +7,14 @@ const rocketsSlice = createSlice({
     rockets: [],
     isLoading: false,
     error: null,
+    fetched: false,
   },
   reducers: {
     setRockets: (state, action) => ({
       ...state,
       rockets: action.payload,
       isLoading: false,
+      fetched: true,
     }),
     setLoading: (state, action) => ({
       ...state,

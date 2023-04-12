@@ -7,10 +7,14 @@ import MissionJoinButton from '../MissionJoinButton';
 export default function Missions() {
   const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(getMissions());
-  }, [dispatch]);
   const { missions, isLoading } = useSelector((store) => store.missions);
+  const fetched = useSelector((store) => store.missions.fetched);
+
+  useEffect(() => {
+    if (!fetched) {
+      dispatch(getMissions());
+    }
+  }, [dispatch, fetched]);
 
   if (isLoading || !missions.length) {
     return <div className="loading">Loading...</div>;

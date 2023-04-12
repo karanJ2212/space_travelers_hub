@@ -34,6 +34,7 @@ const missionSlice = createSlice({
     missions: [],
     isLoading: false,
     error: null,
+    fetched: false,
   },
   reducers: {
     setMissions: (state, action) => ({
@@ -64,6 +65,7 @@ const missionSlice = createSlice({
       ...state,
       missions: action.payload,
       isLoading: false,
+      fetched: true,
     }),
     [getMissions.rejected]: (state, action) => ({
       ...state,
