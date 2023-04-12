@@ -29,20 +29,20 @@
 }
 
 .reserved {
-  background-color: rgb(108, 108, 230);
-  height: 2rem;
   width: 5rem;
   border: none;
-  border-radius: 3px 3px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
+  background-color: #18a2b8;
+  border-radius: 5px;
+  padding: 2px;
+  margin-right: 10px;
 }
 
 .rocket-button {
   height: 2.3rem;
   width: 8rem;
-  background-color: rgb(108, 108, 230);
   border-radius: 3px 3px;
   color: white;
   font-family: Arial, Helvetica, sans-serif;
@@ -52,14 +52,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #007bff;
+  padding: 2px;
 }
 
 .cancel {
   height: 2.3rem;
   width: 8rem;
-  background-color: rgb(5, 5, 37);
-  border-radius: 3px 3px;
-  color: rgb(252, 252, 252);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
   border: none;
@@ -67,4 +66,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #fff;
+  color: #838a90;
+  border-radius: 5px;
+  padding: 2px;
+  border-color: #838a90;
 }
