@@ -1,0 +1,74 @@
+.list-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.heading-rockets {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.rocket-images {
+  width: 250px;
+}
+
+.rocket-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  color: rgb(0, 0, 0);
+}
+
+.paragraph {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  color: #121212;
+}
+
+.reserved {
+  width: 5rem;
+  border: none;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  background-color: #18a2b8;
+  border-radius: 5px;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.rocket-button {
+  height: 2.3rem;
+  width: 8rem;
+  border-radius: 3px 3px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #007bff;
+  padding: 2px;
+}
+
+.cancel {
+  height: 2.3rem;
+  width: 8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8rem;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  color: #838a90;
+  border-radius: 5px;
+  padding: 2px;
+  border-color: #838a90;
+}
